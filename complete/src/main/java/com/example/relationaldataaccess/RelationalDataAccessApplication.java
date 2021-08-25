@@ -17,7 +17,7 @@ public class RelationalDataAccessApplication implements CommandLineRunner {
 
 	private static final Logger log = LoggerFactory.getLogger(RelationalDataAccessApplication.class);
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		SpringApplication.run(RelationalDataAccessApplication.class, args);
 	}
 
@@ -34,7 +34,7 @@ public class RelationalDataAccessApplication implements CommandLineRunner {
 				"id SERIAL, first_name VARCHAR(255), last_name VARCHAR(255))");
 
 		// Split up the array of whole names into an array of first/last names
-		List<Object[]> splitUpNames = Arrays.asList("John Woo", "Jeff Dean", "Josh Bloch", "Josh Long").stream()
+		List<Object[]> splitUpNames = Arrays.asList("John Woo", "Jeff Dean", "Josh Bloch", "Josh Long","Hepeng Wu").stream()
 				.map(name -> name.split(" "))
 				.collect(Collectors.toList());
 
